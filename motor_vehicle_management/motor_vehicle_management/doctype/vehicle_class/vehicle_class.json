@@ -1,0 +1,59 @@
+{
+ "autoname": "field:vehicle_class",
+ "creation": "2020-04-23 20:05:07.979923",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "vehicle_class",
+  "vehicle_class_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "vehicle_class",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_standard_filter": 1,
+   "label": "Vehicle Class",
+   "oldfieldname": "tax_rate",
+   "oldfieldtype": "Currency",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "vehicle_class_description",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Vehicle Class Description",
+   "reqd": 1
+  }
+ ],
+ "modified": "2020-04-24 16:09:06.630674",
+ "modified_by": "Administrator",
+ "module": "Motor Vehicle Management",
+ "name": "Vehicle Class",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

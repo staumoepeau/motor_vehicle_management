@@ -1,0 +1,50 @@
+{
+ "autoname": "field:driver_license_class",
+ "creation": "2020-04-24 10:02:06.364252",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "driver_license_class",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "driver_license_class",
+   "fieldtype": "Data",
+   "label": "Class",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description",
+   "reqd": 1
+  }
+ ],
+ "modified": "2020-04-30 20:14:31.641671",
+ "modified_by": "Administrator",
+ "module": "Motor Vehicle Management",
+ "name": "Driving License Class",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

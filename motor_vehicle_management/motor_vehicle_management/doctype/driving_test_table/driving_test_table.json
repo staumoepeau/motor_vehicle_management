@@ -1,0 +1,78 @@
+{
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2020-04-25 19:52:08.232855",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "test_type",
+  "test_status",
+  "test_inspector",
+  "test_date",
+  "test_certificate_no",
+  "test_location"
+ ],
+ "fields": [
+  {
+   "fieldname": "test_type",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Test Type",
+   "options": "Driver License Test"
+  },
+  {
+   "fieldname": "test_status",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Test Status"
+  },
+  {
+   "fieldname": "test_inspector",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Test Inspector"
+  },
+  {
+   "fieldname": "test_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Test Date"
+  },
+  {
+   "fieldname": "test_certificate_no",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Test Certificate No"
+  },
+  {
+   "fieldname": "test_location",
+   "fieldtype": "Data",
+   "label": "Test Location"
+  }
+ ],
+ "icon": "fa fa-card",
+ "istable": 1,
+ "modified": "2020-04-25 19:54:14.494989",
+ "modified_by": "Administrator",
+ "module": "Motor Vehicle Management",
+ "name": "Driving Test Table",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [],
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

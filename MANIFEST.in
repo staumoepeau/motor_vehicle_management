@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include motor_vehicle_management *.css
+recursive-include motor_vehicle_management *.csv
+recursive-include motor_vehicle_management *.html
+recursive-include motor_vehicle_management *.ico
+recursive-include motor_vehicle_management *.js
+recursive-include motor_vehicle_management *.json
+recursive-include motor_vehicle_management *.md
+recursive-include motor_vehicle_management *.png
+recursive-include motor_vehicle_management *.py
+recursive-include motor_vehicle_management *.svg
+recursive-include motor_vehicle_management *.txt
+recursive-exclude motor_vehicle_management *.pyc

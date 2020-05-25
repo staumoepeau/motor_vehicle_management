@@ -1,0 +1,93 @@
+{
+ "allow_events_in_timeline": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2020-05-07 19:51:37.917888",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section_break_2",
+  "registration_date",
+  "vehicle_class",
+  "license_plate",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "no_copy": 1,
+   "options": ".######",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Registration Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Vehicle Class",
+   "options": "Vehicle Class",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "vehicle_class.vehicle_class",
+   "fieldname": "license_plate",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "License Plate",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Vehicle License",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-05-07 19:51:40.164070",
+ "modified_by": "Administrator",
+ "module": "Motor Vehicle Management",
+ "name": "Vehicle License",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "license_plate",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "license_plate",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

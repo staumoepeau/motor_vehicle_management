@@ -1,0 +1,141 @@
+{
+ "allow_rename": 1,
+ "creation": "2020-05-07 22:36:17.644244",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "license_number",
+  "column_break_3",
+  "driver_license_status",
+  "section_break_2",
+  "customer",
+  "column_break_2",
+  "payment_status",
+  "license_details",
+  "driving_license_class",
+  "issuing_date",
+  "license_period",
+  "column_break_10",
+  "license_length",
+  "license_class_description",
+  "expiry_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "license_number",
+   "fieldtype": "Read Only",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "License Number"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "driver_license_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Driver License Status",
+   "options": "Active\nSuspended\nLeft"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "mvm_customer.full_name",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Customer Name",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Payment Status",
+   "options": "Unpaid\nPaid\nOverdue"
+  },
+  {
+   "fieldname": "license_details",
+   "fieldtype": "Section Break",
+   "label": "License Details"
+  },
+  {
+   "fieldname": "driving_license_class",
+   "fieldtype": "Link",
+   "label": "License Class",
+   "options": "Driving License Class",
+   "reqd": 1
+  },
+  {
+   "fieldname": "issuing_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Issuing Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "license_period",
+   "fieldtype": "Select",
+   "label": "License Period (Month/Year)",
+   "options": "\nMonth\nYear"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "license_length",
+   "fieldtype": "Select",
+   "label": "License Length",
+   "options": "\n1\n2\n3\n4\n5\n6",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "driving_license_class.description",
+   "fieldname": "license_class_description",
+   "fieldtype": "Read Only",
+   "label": "License Class Description"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Expiry Date",
+   "read_only": 1
+  }
+ ],
+ "icon": "fa fa-card",
+ "istable": 1,
+ "modified": "2020-05-07 23:02:54.027302",
+ "modified_by": "Administrator",
+ "module": "Motor Vehicle Management",
+ "name": "Driver License Details",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [],
+ "search_fields": "customer",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "customer"
+}

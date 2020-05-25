@@ -1,0 +1,335 @@
+{
+ "allow_events_in_timeline": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2020-04-23 13:45:35.944204",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section_break_2",
+  "registration_date",
+  "vehicle_class",
+  "license_plate_prefix",
+  "vehicle_used_for",
+  "gov_department",
+  "column_break_3",
+  "vehicle_class_description",
+  "plate_type",
+  "license_plate",
+  "section_break_4",
+  "data_5",
+  "section_break_25",
+  "vehicle_owner",
+  "section_break_39",
+  "warrant_of_fitness",
+  "vehicle_details",
+  "vin",
+  "make",
+  "chassis_no",
+  "no_of_cylinder",
+  "year_of_manufacture",
+  "length",
+  "net_weight",
+  "wheels",
+  "lr_hand_drive",
+  "column_break_8",
+  "model",
+  "fuel_type",
+  "engine_no",
+  "width",
+  "color",
+  "cc_rating",
+  "max_weight",
+  "gvwr",
+  "doors",
+  "column_break_15",
+  "location",
+  "column_break_23",
+  "registration_locaton",
+  "column_break_21",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "make",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Make",
+   "options": "Vehicle Maker",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Model"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "vehicle_details",
+   "fieldtype": "Section Break",
+   "label": "Vehicle Details"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "chassis_no",
+   "fieldtype": "Data",
+   "label": "Chassis No"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fuel_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Fuel Type",
+   "options": "Petrol\nDiesel\nNatural Gas\nElectric",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Data",
+   "label": "Color"
+  },
+  {
+   "fieldname": "wheels",
+   "fieldtype": "Int",
+   "label": "Wheels"
+  },
+  {
+   "fieldname": "doors",
+   "fieldtype": "Int",
+   "label": "Doors"
+  },
+  {
+   "fieldname": "engine_no",
+   "fieldtype": "Data",
+   "label": "Engine No"
+  },
+  {
+   "fieldname": "no_of_cylinder",
+   "fieldtype": "Data",
+   "label": "No of Cylinder"
+  },
+  {
+   "fieldname": "cc_rating",
+   "fieldtype": "Data",
+   "label": "CC Rating"
+  },
+  {
+   "fieldname": "lr_hand_drive",
+   "fieldtype": "Select",
+   "label": "L/R Hand Drive",
+   "options": "\nRIGHT HAND DRIVE\nLEFT HAND DRIVE"
+  },
+  {
+   "fieldname": "vehicle_class",
+   "fieldtype": "Link",
+   "label": "Vehicle Class",
+   "options": "Vehicle Class",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "vehicle_class.vehicle_class_description",
+   "fieldname": "vehicle_class_description",
+   "fieldtype": "Read Only",
+   "label": "Vehicle Class Description"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "plate_type",
+   "fieldtype": "Select",
+   "label": "License Plate Type",
+   "options": "\nNormal\nCustom",
+   "reqd": 1
+  },
+  {
+   "fieldname": "data_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "year_of_manufacture",
+   "fieldtype": "Date",
+   "label": "Year of Manufacture"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "registration_locaton",
+   "fieldtype": "Data",
+   "label": "Registration Locaton"
+  },
+  {
+   "fieldname": "section_break_25",
+   "fieldtype": "Section Break",
+   "label": "Owner Information"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "no_copy": 1,
+   "options": ".######",
+   "set_only_once": 1
+  },
+  {
+   "fetch_from": "vehicle_class.vehicle_class",
+   "fieldname": "license_plate_prefix",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "License Plate Prefix",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "license_plate",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "License Plate",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "label": "Registration Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vin",
+   "fieldtype": "Data",
+   "label": "Vehicle Indentification Number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "length",
+   "fieldtype": "Data",
+   "label": "Length (M)"
+  },
+  {
+   "fieldname": "gvwr",
+   "fieldtype": "Data",
+   "label": "Gross Vehicle Weight Rating"
+  },
+  {
+   "fieldname": "width",
+   "fieldtype": "Data",
+   "label": "Witdh (M)"
+  },
+  {
+   "fieldname": "net_weight",
+   "fieldtype": "Data",
+   "label": "Net Weight (Kg)"
+  },
+  {
+   "fieldname": "max_weight",
+   "fieldtype": "Data",
+   "label": "Max Weight (Kg)"
+  },
+  {
+   "fieldname": "vehicle_used_for",
+   "fieldtype": "Select",
+   "label": "Vehicle used for",
+   "options": "Private\nCompany\nGovernment\nNon-Profit\nTaxi",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_39",
+   "fieldtype": "Section Break",
+   "label": "Warrant of Fitness"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Vehicle Registration",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "vehicle_owner",
+   "fieldtype": "Table",
+   "label": "Vehicle Owner",
+   "options": "Vehicle Owner"
+  },
+  {
+   "fieldname": "warrant_of_fitness",
+   "fieldtype": "Table",
+   "label": "Warrant of Fitness",
+   "options": "Warrant of Fitness Table",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.vehicle_used_for=='Government'",
+   "fieldname": "gov_department",
+   "fieldtype": "Data",
+   "label": "Ministry/Department"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-05-05 14:57:04.713789",
+ "modified_by": "Administrator",
+ "module": "Motor Vehicle Management",
+ "name": "Vehicle Registration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "license_plate,location,model",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "license_plate",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

@@ -1,0 +1,157 @@
+{
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2020-04-25 19:04:29.449018",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "customer",
+  "column_break_3",
+  "section_break_2",
+  "test_type",
+  "test_status",
+  "test_inspector",
+  "column_break_2",
+  "test_date",
+  "test_certificate_no",
+  "test_location",
+  "section_break_13",
+  "payment_status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "DRT.YY.####"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "test_type",
+   "fieldtype": "Select",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Test Type",
+   "options": "\nTheory\nPractical",
+   "reqd": 1
+  },
+  {
+   "fieldname": "test_status",
+   "fieldtype": "Select",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Test Status",
+   "options": "\nPass\nFailed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "test_inspector",
+   "fieldtype": "Data",
+   "label": "Test Inspector",
+   "reqd": 1
+  },
+  {
+   "fieldname": "test_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Test Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "test_certificate_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Test Certificate No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "test_location",
+   "fieldtype": "Data",
+   "label": "Test Location",
+   "options": "\n1\n3",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Unpaid",
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Payment",
+   "options": "\nPaid\nUnpaid\nOverdue\nCancelled",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Driver License Test",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "icon": "fa fa-card",
+ "is_submittable": 1,
+ "modified": "2020-05-01 09:59:36.231577",
+ "modified_by": "Administrator",
+ "module": "Motor Vehicle Management",
+ "name": "Driver License Test",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

@@ -1,0 +1,90 @@
+{
+ "creation": "2020-04-25 08:54:19.925376",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "inspection_date",
+  "inpected_by",
+  "inspected_at",
+  "certificate_no",
+  "expiry_date",
+  "warrant_of_fitness",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "inspection_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Inspection Date"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "inpected_by",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Inpected By"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "inspected_at",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Inspected At"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "certificate_no",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Certificate No"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Expiry Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Warrant of Fitness Table",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "warrant_of_fitness",
+   "fieldtype": "Link",
+   "label": "Warrant of Fitness",
+   "options": "Warrant of Fitness"
+  }
+ ],
+ "is_submittable": 1,
+ "istable": 1,
+ "modified": "2020-04-27 14:42:34.076887",
+ "modified_by": "Administrator",
+ "module": "Motor Vehicle Management",
+ "name": "Warrant of Fitness Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

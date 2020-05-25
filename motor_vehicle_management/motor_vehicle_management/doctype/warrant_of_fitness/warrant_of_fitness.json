@@ -1,0 +1,165 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2020-04-25 10:12:39.723259",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section_break_2",
+  "license_plate_id",
+  "column_break_2",
+  "license_plate",
+  "section_break_21",
+  "inspection_date",
+  "inpected_by",
+  "certificate_no",
+  "column_break_61",
+  "expiry_date",
+  "inspected_at",
+  "status",
+  "section_break_13",
+  "payment_status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "inspection_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Inspection Date"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "inpected_by",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Inpected By"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "inspected_at",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Inspected At"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "certificate_no",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Certificate No"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Expiry Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "license_plate_id.license_plate",
+   "fieldname": "license_plate",
+   "fieldtype": "Read Only",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "License Plate"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "WOF.YY.####"
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_61",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "license_plate_id",
+   "fieldtype": "Link",
+   "label": "License Plate ID",
+   "options": "Vehicle Registration"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nExpired",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Warrant of Fitness",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "Unpaid",
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "\nPaid\nUnpaid\nOverdue\nCancelled"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-05-01 10:00:18.560775",
+ "modified_by": "Administrator",
+ "module": "Motor Vehicle Management",
+ "name": "Warrant of Fitness",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "certificate_no",
+ "track_changes": 1
+}

@@ -1,0 +1,50 @@
+{
+ "autoname": "field:driver_license_class",
+ "creation": "2020-04-24 16:19:07.908650",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "driver_license_class",
+  "description",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "driver_license_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Class",
+   "options": "Driving License Class",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fetch_from": "driver_license_class.description",
+   "fieldname": "description",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Driving License Class Table",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-04-24 16:20:34.035003",
+ "modified_by": "Administrator",
+ "module": "Motor Vehicle Management",
+ "name": "Driving License Class Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

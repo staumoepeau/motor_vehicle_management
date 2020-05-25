@@ -1,0 +1,244 @@
+{
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2020-04-27 17:21:55.266138",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_info",
+  "naming_series",
+  "salutation",
+  "fname",
+  "lname",
+  "image",
+  "column_break0",
+  "full_name",
+  "mvm_customer_group",
+  "customer_status",
+  "customer_bio_section",
+  "gender",
+  "hair_colour",
+  "height",
+  "data_11",
+  "dob",
+  "eye_colour",
+  "weight",
+  "address_contacts",
+  "address",
+  "column_break1",
+  "phone_no",
+  "mobile_no",
+  "email",
+  "section_break_25",
+  "customer_signature",
+  "column_break_27"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_info",
+   "fieldtype": "Section Break",
+   "label": "Name and Type",
+   "oldfieldtype": "Section Break",
+   "options": "fa fa-user"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "no_copy": 1,
+   "options": "CLIENT-.YYYY.-",
+   "set_only_once": 1
+  },
+  {
+   "depends_on": "eval:doc.mvm_customer_group =='Individual'",
+   "fieldname": "salutation",
+   "fieldtype": "Link",
+   "label": "Salutation",
+   "options": "Salutation"
+  },
+  {
+   "depends_on": "eval:doc.mvm_customer_group == 'Individual'",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Image",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "column_break0",
+   "fieldtype": "Column Break",
+   "width": "50%"
+  },
+  {
+   "fieldname": "address_contacts",
+   "fieldtype": "Section Break",
+   "label": "Address and Contact"
+  },
+  {
+   "fieldname": "column_break1",
+   "fieldtype": "Column Break",
+   "width": "50%"
+  },
+  {
+   "fetch_from": "customer_primary_contact.mobile_no",
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No"
+  },
+  {
+   "fieldname": "mvm_customer_group",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer Type",
+   "oldfieldname": "customer_group",
+   "oldfieldtype": "Link",
+   "options": "MVM Customer Group",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "customer_primary_contact.email_id",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email Id"
+  },
+  {
+   "fieldname": "phone_no",
+   "fieldtype": "Data",
+   "label": "Phone No"
+  },
+  {
+   "depends_on": "eval:doc.mvm_customer_group == 'Individual'",
+   "fieldname": "customer_bio_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Details"
+  },
+  {
+   "fieldname": "data_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fname",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "lname",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "bold": 1,
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Full Name",
+   "no_copy": 1,
+   "oldfieldname": "customer_name",
+   "oldfieldtype": "Data",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "depends_on": "eval:doc.mvm_customer_group == 'Individual'",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "hair_colour",
+   "fieldtype": "Data",
+   "label": "Hair Colour"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "eye_colour",
+   "fieldtype": "Data",
+   "label": "Eye Colour"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "customer_status",
+   "fieldtype": "Select",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Customer Status",
+   "options": "Active\nDeceased"
+  },
+  {
+   "fieldname": "section_break_25",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customer_signature",
+   "fieldtype": "Signature",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "icon": "fa fa-user",
+ "image_field": "image",
+ "modified": "2020-04-28 11:57:07.184282",
+ "modified_by": "Administrator",
+ "module": "Motor Vehicle Management",
+ "name": "MVM Customer",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "full_name, mobile_no",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "title_field": "full_name",
+ "track_changes": 1
+}

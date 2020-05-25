@@ -1,0 +1,212 @@
+{
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:{driving_license_class}{######}",
+ "creation": "2020-04-24 12:17:08.783673",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "license_number",
+  "column_break_3",
+  "driver_license_status",
+  "section_break_2",
+  "customer",
+  "image",
+  "column_break_2",
+  "payment_status",
+  "dob",
+  "license_details",
+  "driving_license_class",
+  "issuing_date",
+  "license_period",
+  "column_break_10",
+  "license_class_description",
+  "expiry_date",
+  "driving_license_categories",
+  "vehicle_class",
+  "section_break_16",
+  "driving_test",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": ".######"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "license_details",
+   "fieldtype": "Section Break",
+   "label": "License Details"
+  },
+  {
+   "fieldname": "license_number",
+   "fieldtype": "Read Only",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "License Number"
+  },
+  {
+   "fieldname": "issuing_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Issuing Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Expiry Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "driving_license_categories",
+   "fieldtype": "Section Break",
+   "label": "Driving License Categories"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "vehicle_class",
+   "fieldtype": "Table",
+   "label": "Driving License Category",
+   "options": "Vehicle Class Table"
+  },
+  {
+   "fieldname": "driving_license_class",
+   "fieldtype": "Link",
+   "label": "License Class",
+   "options": "Driving License Class",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "driving_license_class.description",
+   "fieldname": "license_class_description",
+   "fieldtype": "Read Only",
+   "label": "License Class Description"
+  },
+  {
+   "fieldname": "license_period",
+   "fieldtype": "Select",
+   "label": "License Period (Years)",
+   "options": "\n1\n3",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "driving_test",
+   "fieldtype": "Table",
+   "label": "Driving Test",
+   "options": "Driving Test Table"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Driver License",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "driver_license_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Driver License Status",
+   "options": "Active\nSuspended\nLeft"
+  },
+  {
+   "fetch_from": "mvm_customer.full_name",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Customer Name",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Payment Status",
+   "options": "Unpaid\nPaid\nOverdue"
+  },
+  {
+   "fetch_from": "customer.image",
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Image",
+   "print_hide": 1
+  },
+  {
+   "fetch_from": "customer.date_of_birth",
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "Date of Birth",
+   "read_only": 1
+  }
+ ],
+ "icon": "fa fa-card",
+ "image_field": "image",
+ "modified": "2020-05-07 22:37:17.184791",
+ "modified_by": "Administrator",
+ "module": "Motor Vehicle Management",
+ "name": "Driver License",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "customer",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "customer",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

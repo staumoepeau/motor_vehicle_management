@@ -1,0 +1,50 @@
+{
+ "creation": "2020-04-25 08:47:52.516422",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_name",
+  "ownership_type",
+  "driver_license"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer Name",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "driver_license",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Driver License"
+  },
+  {
+   "fieldname": "ownership_type",
+   "fieldtype": "Select",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Ownership Type",
+   "options": "\nPrimary\nSecondary"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-04-25 10:45:23.969725",
+ "modified_by": "Administrator",
+ "module": "Motor Vehicle Management",
+ "name": "Vehicle Owner",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

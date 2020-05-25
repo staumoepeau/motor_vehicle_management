@@ -1,0 +1,47 @@
+{
+ "creation": "2020-04-25 13:17:13.954789",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "vehicle_class",
+  "vehicle_class_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "vehicle_class",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Vehicle Class",
+   "oldfieldname": "tax_rate",
+   "oldfieldtype": "Currency",
+   "options": "Vehicle Class",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "vehicle_class.vehicle_class_description",
+   "fieldname": "vehicle_class_description",
+   "fieldtype": "Read Only",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Vehicle Class Description",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-05-07 20:09:00.364945",
+ "modified_by": "Administrator",
+ "module": "Motor Vehicle Management",
+ "name": "Vehicle Class Table",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
