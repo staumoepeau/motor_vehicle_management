@@ -6,7 +6,8 @@
  "engine": "InnoDB",
  "field_order": [
   "vehicle_class",
-  "vehicle_class_description"
+  "vehicle_class_description",
+  "fee"
  ],
  "fields": [
   {
@@ -32,10 +33,17 @@
    "in_standard_filter": 1,
    "label": "Vehicle Class Description",
    "reqd": 1
+  },
+  {
+   "fetch_from": "vehicle_class.fee",
+   "fieldname": "fee",
+   "fieldtype": "Currency",
+   "label": "Fee",
+   "reqd": 1
   }
  ],
  "istable": 1,
- "modified": "2020-05-27 00:14:09.634212",
+ "modified": "2020-05-28 14:22:15.693821",
  "modified_by": "Administrator",
  "module": "Motor Vehicle Management",
  "name": "Vehicle Class Table",

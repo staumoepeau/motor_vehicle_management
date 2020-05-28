@@ -74,6 +74,7 @@
    "fieldtype": "Section Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "vehicle_class",
    "fieldtype": "Table",
    "label": "Driving License Category",
@@ -207,7 +208,7 @@
  "icon": "fa fa-card",
  "image_field": "image",
  "is_submittable": 1,
- "modified": "2020-05-28 13:32:25.496137",
+ "modified": "2020-05-28 14:24:04.561469",
  "modified_by": "Administrator",
  "module": "Motor Vehicle Management",
  "name": "Driver License",
