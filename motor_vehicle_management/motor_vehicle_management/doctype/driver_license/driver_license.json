@@ -8,25 +8,29 @@
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
+  "image",
   "license_number",
-  "column_break_3",
+  "section_break_3",
   "driver_license_status",
+  "column_break_3",
+  "payment_status",
   "section_break_2",
   "customer",
-  "image",
   "column_break_2",
-  "payment_status",
   "dob",
+  "years_old",
   "license_details",
   "driving_license_class",
   "issuing_date",
-  "license_period",
+  "license_frequency",
   "column_break_10",
   "license_class_description",
+  "license_period",
   "expiry_date",
   "driving_license_categories",
   "vehicle_class",
   "section_break_16",
+  "excempt_from_test",
   "driving_test",
   "amended_from"
  ],
@@ -57,23 +61,8 @@
    "label": "License Number"
   },
   {
-   "fieldname": "issuing_date",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Issuing Date",
-   "reqd": 1
-  },
-  {
    "fieldname": "column_break_10",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "expiry_date",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Expiry Date",
-   "read_only": 1
   },
   {
    "fieldname": "driving_license_categories",
@@ -94,27 +83,14 @@
    "fieldname": "driving_license_class",
    "fieldtype": "Link",
    "label": "License Class",
-   "options": "Driving License Class",
-   "reqd": 1
-  },
-  {
-   "fetch_from": "driving_license_class.description",
-   "fieldname": "license_class_description",
-   "fieldtype": "Read Only",
-   "label": "License Class Description"
-  },
-  {
-   "fieldname": "license_period",
-   "fieldtype": "Select",
-   "label": "License Period (Years)",
-   "options": "\n1\n3",
-   "reqd": 1
+   "options": "Driving License Class"
   },
   {
    "fieldname": "section_break_16",
    "fieldtype": "Section Break"
   },
   {
+   "depends_on": "eval:doc.excempt_from_test != 1",
    "fieldname": "driving_test",
    "fieldtype": "Table",
    "label": "Driving Test",
@@ -134,11 +110,13 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "driver_license_status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Driver License Status",
-   "options": "Active\nSuspended\nLeft"
+   "options": "Active\nSuspended\nExpired\nLeft\nCancel",
+   "read_only": 1
   },
   {
    "fetch_from": "mvm_customer.full_name",
@@ -161,7 +139,8 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Payment Status",
-   "options": "Unpaid\nPaid\nOverdue"
+   "options": "Unpaid\nPaid\nOverdue",
+   "read_only": 1
   },
   {
    "fetch_from": "customer.image",
@@ -177,11 +156,58 @@
    "fieldtype": "Date",
    "label": "Date of Birth",
    "read_only": 1
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "driving_license_class.description",
+   "fieldname": "license_class_description",
+   "fieldtype": "Read Only",
+   "label": "License Class Description"
+  },
+  {
+   "fieldname": "issuing_date",
+   "fieldtype": "Date",
+   "label": "Issuing Date"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "license_period",
+   "fieldtype": "Select",
+   "label": "License Period",
+   "options": "Years",
+   "read_only": 1
+  },
+  {
+   "fieldname": "license_frequency",
+   "fieldtype": "Select",
+   "label": "License Frequency",
+   "options": "\n1\n3\n5"
+  },
+  {
+   "fieldname": "years_old",
+   "fieldtype": "Data",
+   "label": "Years Old",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "excempt_from_test",
+   "fieldtype": "Check",
+   "label": "Excempt from taking the Test"
   }
  ],
  "icon": "fa fa-card",
  "image_field": "image",
- "modified": "2020-05-07 22:37:17.184791",
+ "is_submittable": 1,
+ "modified": "2020-05-28 13:32:25.496137",
  "modified_by": "Administrator",
  "module": "Motor Vehicle Management",
  "name": "Driver License",
