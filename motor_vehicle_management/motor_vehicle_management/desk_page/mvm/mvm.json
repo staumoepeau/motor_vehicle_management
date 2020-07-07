@@ -1,0 +1,43 @@
+{
+ "cards": [
+  {
+   "hidden": 0,
+   "label": "Driver",
+   "links": "[\n    {\n\t    \"description\": \"Driver License\",\n        \"label\": \"Driver License\",\n        \"name\": \"Driver License\",\n        \"type\": \"doctype\",\n        \"onboard\": 1\n    },\n\t{\n\t\t\"description\": \"Driver License Test\",\n\t\t\"label\": \"Driver License Test\",\n\t\t\"name\": \"Driver License Test\",\n\t\t\"type\": \"doctype\"\n\t}\n]"
+  },
+  {
+   "hidden": 0,
+   "label": "MVM Settings",
+   "links": "[\n\t\t\t\t{\n\t\t\t\t\t\"type\": \"doctype\",\n\t\t\t\t\t\"name\": \"Vehicle Class\",\n\t\t\t\t\t\"description\": \"Vehicle Class\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"type\": \"doctype\",\n\t\t\t\t\t\"name\": \"Vehicle Maker\",\n\t\t\t\t\t\"description\": \"Vehicle Maker\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"type\": \"doctype\",\n\t\t\t\t\t\"name\": \"Driving License Class\",\n\t\t\t\t\t\"description\": \"Driving License Class\"\n\t\t\t\t}\n\t\t\t]"
+  }
+ ],
+ "category": "Modules",
+ "charts": [],
+ "creation": "2020-06-13 17:25:49.645273",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Desk Page",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "idx": 0,
+ "is_standard": 1,
+ "label": "MVM",
+ "modified": "2020-06-13 19:29:21.574955",
+ "modified_by": "Administrator",
+ "module": "Motor Vehicle Management",
+ "name": "MVM",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "color": "#9deca2",
+   "format": "{} Active",
+   "label": "Driver License",
+   "link_to": "Driver License",
+   "stats_filter": "{ \"driver_license_status\": \"Active\" }",
+   "type": "DocType"
+  }
+ ]
+}
